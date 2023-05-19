@@ -1,0 +1,321 @@
+.arc1, .arc2 {
+    fill: steelblue;
+}
+.arc1 {
+    stroke: #fff;
+}
+.arc2 {
+    stroke: #000;
+}
+.label {
+    font-size: 14px;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.chart {
+    width: 700px;
+    height:450px;
+    border: 2px solid black;
+    margin: 20px;
+    padding:10px;
+    position: relative;
+}
+
+#chart_div2{
+    float:right;
+}
+
+#chart_div4{
+    float:right;
+}
+#chart_div6{
+    float:right;
+}
+
+/* #explanation img{
+    float: left;
+    align-items: center;
+} */
+
+#controls{
+    margin-top: 10px;
+    margin-left: 75px;
+}
+
+/* #radiation-flow{
+    margin-left: 450px;
+} */
+
+#radiation-flow{
+    display: inline-block;
+}
+
+#show-hospitals{
+    display: inline-block;
+}
+
+#show-static-sensors{
+    display: inline-block;
+}
+
+.myContainer{
+    width: 1500px;
+    min-width: 1500px;
+    margin-left: 10px;
+}
+
+#staticmapchart{
+    border: 1px solid black;
+    /* width: 50%; */
+    width: 650px;
+    /* margin-left: 50px; */
+    margin-top: 10px;
+    height: 450px;
+    padding: 15px;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+#routemapchart{
+    border: 1px solid black;
+    /* width: 50%; */
+    width: 650px;
+    height: 450px;
+    padding: 15px;
+    margin-left: 50px;
+    display: inline-block;
+}
+#middiv{
+    height:450px;
+}
+
+#circularbarplot{
+    border: 1px solid black;
+    width: 500px;
+    height: 450px;
+    display: inline-block;
+}
+#gauge{
+    height: 450px;
+    width: 500px;
+    border: 1px solid black;
+    display: inline-block;
+}
+#radarChart{
+    position:absolute;
+    border: 1px solid black;
+    width: 500px;
+    height: 450px;
+    margin-left: 3px;
+    display: inline-block;
+}
+
+
+#ridgelinechart{
+    border: 1px solid black;
+    width: 1300px;
+    height: 600px;
+    padding: 10px;
+    display: inline-block;
+    margin-left: 100px;
+}
+.axis .domain {
+    display: none;
+}
+
+.axis--x text {
+    fill: #999;
+}
+
+.axis--x line {
+    stroke: #aaa;
+}
+
+.axis--region .tick line {
+    display: none;
+}
+
+.axis--region text {
+    font-size: 12px;
+    fill: #777;
+}
+
+.axis--region .tick:nth-child(odd) text {
+    fill: #222;
+}
+
+/* .line {
+    fill: none;
+    stroke: #000;
+} */
+
+/* .area {
+    fill: #448cab;
+}
+
+.region:nth-child(odd) .area {
+    fill: #5ca3c1;
+} */
+.checkbox-menu li label {
+    display: block;
+    padding: 3px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    margin:0;
+    transition: background-color .4s ease;
+}
+.checkbox-menu li input {
+    margin: 0px 5px;
+    top: 2px;
+    position: relative;
+}
+
+.checkbox-menu li.active label {
+    background-color: #cbcbff;
+    font-weight:bold;
+}
+
+.checkbox-menu li label:hover,
+.checkbox-menu li label:focus {
+    background-color: #f5f5f5;
+}
+
+.checkbox-menu li.active label:hover,
+.checkbox-menu li.active label:focus {
+    background-color: #b8b8ff;
+}
+/* #sensorIDText{
+    position: absolute;
+    margin-top: 80%;
+    margin-left: 50%;
+} */
+
+#heading-top{
+    text-align: center;
+}
+h2{
+    display: inline-block;
+}
+
+#explanation{
+    height: 50px;
+    width: auto;
+    /* text-align: center; */
+    margin-left: 50px;
+    font-family: 'Roboto Mono';
+    display: inline-block;
+}
+
+#explanation img{
+    display: inline-block;
+}
+#explanation h4{
+    display: inline-block;
+    font-size: 25px;
+}
+
+#date-picker button{
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#date-picker button[disabled]{
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: brown;
+}
+
+label{
+    font-size: large;
+}
+
+#date-picker{
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 350px;
+    height: 120px;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+.button-66 {
+    display: inline-block;
+    background-color: #0a6bff;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: rgba(1,60,136,.5) 0 -1px 3px 0 inset,rgba(0,44,97,.1) 0 3px 6px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inherit;
+    font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 0;
+    min-height: 56px;
+    min-width: 120px;
+    padding: 16px 20px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+  }
+  
+  .button-66:hover {
+    background-color: #0a6bff;
+    transform: translateY(-2px);
+  }
+  
+  @media (min-width: 768px) {
+    .button-66 {
+      padding: 16px 44px;
+      min-width: 150px;
+    }
+  }
+
+
+
+#cbptooltip {
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    z-index: 10;
+    visibility: hidden;
+  }
+
+
+.info text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#radar_tooltip {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+    height: 80px;
+    z-index: 1000;
+}

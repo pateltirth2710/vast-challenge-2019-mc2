@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Group Project - CSE 578 - Spring 2023</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="/static/css/style.css">
+
+        <script type="module"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script type="module" src="/static/js/index.js"></script>
+        <!-- <script type="module" src="/static/js/innovation.js"></script> -->
+        <script type="module" src="/static/js/radarSupport.js"></script>
+       <script type="module" src="/static/js/radarchart.js"></script>
+    </head>
+    <body>
+        <div id="heading-top">
+            <h2 style="font-family: Roboto Mono; font-weight: bold;">VAST Challenge 2019 MC2</h2>
+        <div id="explanation">
+            <img src="../data/nuclear-plant2.png" width="50" height="50">
+            <img src="../data/blasting.png" width="50" height="50">
+            <h4>St.Himark City Explosion</h4>
+        </div>
+        </div>
+        
+        <div id="controls">
+            <label for="date">Date:</label>
+            <select name="date" id="date-selection">
+                <option selected ="selected" value="2020-04-06">6th April</option>
+                <option value="2020-04-07">7th April</option>
+                <option value="2020-04-08">8th April</option>
+                <option value="2020-04-09">9th April</option>
+                <option value="2020-04-10">10th April</option>
+            </select>
+            <button id="show-hospitals" type="button">Show Hospitals</button>
+            <button id="show-static-sensors" type="button">Show Static Sensors</button>
+            <button id="radiation-flow" type="button">Show Radiation Flow</button>
+            <!-- <button id="test" type="button">Test</button> -->
+
+        </div>
+        <div class="myContainer">
+            
+                
+                <div id="staticmapchart"></div>
+                <div id="routemapchart"></div>
+                <div>
+                <div id="circularbarplot">
+                    <div id="cbptooltip"></div>
+                </div>
+                <div id="gauge"></div>
+                <div id="radarChart" class="radarChart">
+                
+                    
+                </div>
+
+
+                </div>
+                <div id="ridgelinechart">
+                    
+                    <div class="dropdown">
+                    
+                        <p style="text-align: center; font-size: 16px; font-weight: bold;">Aggregated radiation levels recorded across regions </p><br>
+                        <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true">
+                      <!-- <i class="glyphicon glyphicon-cog"></i> -->
+                      <!--<span class="caret"></span>-->
+                      Regions
+                    </button>
+                    
+                        <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
+                            <li ><label><input type="checkbox" name="region" title="Palace Hills"  > Palace Hills</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Northwest"  > Northwest</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Old Town"  > Old Town</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Safe Town"  > Safe Town</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Southwest"  > Southwest</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Downtown"  > Downtown</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Wilson Forest"  > Wilson Forest</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Scenic Vista"  > Scenic Vista</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Broadview"  > Broadview</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Chapparal"  > Chapparal</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Terrapin Springs"  > Terrapin Springs</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Pepper Mill"  > Pepper Mill</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Cheddarford"  > Cheddarford</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Easton"  > Easton</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Weston"  > Weston</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Southton"  > Southton</label></li>
+                            <li ><label><input type="checkbox" name="region" title="Oak Willow"  > Oak Willow</label></li>
+                            <li ><label><input type="checkbox" name="region" title="East Parton"  > East Parton</label></li>
+                            <li ><label><input type="checkbox" name="region" title="West Parton"  > West Parton</label></li>
+                        </ul> 
+                    </div>
+                    <!-- <div id="title"> <p> Heading </p>
+                        </div> -->
+                    <div id="lineplot"></div>
+                </div>
+                
+
+            <!-- <div  class= "chart" id="chart_div1" style="display: inline-block">
+            </div>
+            <div  class= "chart" id="chart_div2" style="display: inline-block">
+                
+            </div>
+            <div class= "radarChart" id="radarChart" >
+               
+            </div>
+            <div class= "chart" id="chart_div4" style="display: inline-block">
+            </div>
+            <div class= "chart" id="chart_div5" style="display: inline-block">
+            </div>
+            <div class= "chart" id="chart_div6" style="display: inline-block">
+            </div>
+                <svg id="chart_svg" ></svg>  -->
+                <!-- <div id ="my_dataviz">
+                
+                </div>
+                <div id = "legend_div"></div> --> 
+               
+               
+            
+        </div>
+        <div id="radar_tooltip" ></div>
+    </body>
+</html>
